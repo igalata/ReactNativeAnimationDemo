@@ -20,6 +20,7 @@ const image = resolveAssetSource(require('./volleyball.png'));
 
 var world;
 var ball;
+var lastRendered = 0;
 
 export default class GLExample extends Component {
 
@@ -68,17 +69,18 @@ export default class GLExample extends Component {
   }
 
   componentDidUpdate() {
+    move();
+    var now = Date.now();
+    var diff = now - lastRendered;
+    lastRendered = now;
+    var timeout = diff >= 16 ? 0 : 16 - diff;
     setTimeout(() => {
       this.forceUpdate();
-    }, 0);
+    }, timeout);
   }
 
   componentDidMount() {
     this.componentDidUpdate()
-  }
-
-  componentWillUpdate() {
-    move();
   }
 }
 
