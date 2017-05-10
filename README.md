@@ -2,6 +2,8 @@
 
 The demo animation created using [gl-react-native](https://github.com/ProjectSeptemberInc/gl-react-native/) and [box2dweb](https://github.com/hecht-software/box2dweb)
 
+Read how I did it on [Medium](https://medium.com/proandroiddev/animate-it-on-react-native-with-opengl-b470252166f4)
+
 <img src="1.gif"/>
 
 ## Requirements
